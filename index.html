@@ -1,27 +1,40 @@
-<div class="game">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style/blackjack.css">
+  <title>BlackJack</title>
+</head>
+<body>
+
   <div class="game">
-         <h3>Welcome to BlackJack!</h3>
+    <div class="game">
+      <h3>Welcome to BlackJack!</h3>
 
- <div class="game-body">
+      <div class="game-body">
         <div class="game-options">
-         <input type="button" id="btnStart" class="btn" value="start" onclick="startblackjack()">
-         <input type="button" class="btn" value="hit me" onclick="hitMe()">
-         <input type="button" class="btn" value="stay" onclick="stay()">
-         </div>
+          <input type="button" id="btnStart" class="btn" value="start" onclick="startblackjack()">
+          <input type="button" class="btn" value="hit me" onclick="hitMe()">
+          <input type="button" class="btn" value="stay" onclick="stay()">
+        </div>
 
-             <div class="status" id="status"></div>
+        <div class="status" id="status"></div>
 
-         <div id="deck" class="deck">
-             <div id="deckcount">Card Deck: 52</div>
-         </div>
+        <div id="deck" class="deck">
+          <div id="deckcount">Card Deck: 52</div>
+        </div>
 
-         <div id="players" class="players">
-         </div>
+        <div id="players" class="players">
+        </div>
 
-         <div class="clear"></div>
- </div>
-</div>
+        <div class="clear"></div>
+      </div>
+    </div>
 
 
 
-<script src="index.js"></script>
+    <script src="javascript/index.js"></script>
+  </body>

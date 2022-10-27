@@ -1,0 +1,19 @@
+html {
+  background-color: black
+}
+.game-body {
+  text-align: center;
+}
+
+.game {
+color: gold;
+text-align: center;
+}
+.game-options {
+  color: green;
+}
+
+
+.deck {
+  margin-top: 5%;
+}
