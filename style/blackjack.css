@@ -13,7 +13,11 @@ text-align: center;
   color: green;
 }
 
-
+.btn {
+  color: black;
+  padding: 1%;
+  background-color: bisque;
+}
 .deck {
   margin-top: 5%;
 }
