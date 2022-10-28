@@ -25,24 +25,31 @@ console.log(getDeck())
 
 
 
+// function shuffle()
+// {
+//     // for 1000 turns
+//     // switch the values of two random cards
+//     for (var i = 0; i < 1000; i++)
+//     {
+//         var location1 = Math.floor((Math.random() * deck.length));
+//         var location2 = Math.floor((Math.random() * deck.length));
+//         var tmp = deck[location1];
+
+//         deck[location1] = deck[location2];
+//         deck[location2] = tmp;
+//     }
+// }
+// next I need to shuffle the card deck to randomise each play
 
 
+// function shuffle()
+// {
 
+//   // we will shuffle for 500 turns
+//   //we need to switch the values of two random cards
 
-// console.log(parseInt(values[0]));
+// }
 
+var location = Math.floor(Math.random() * deck.length);
 
-// console.log(suits.length)
-// console.log(values.length)
-
-// var weight = parseInt(values[x]);
-// var x = 0
-// x++
-// console.log(parseInt(values[x]))
-
-// var test = ["hi", "32", "92"]
-
-// console.log(parseInt(test[1]))
-
-
-// console.log(parseInt(test[0]))
+console.log(location)
