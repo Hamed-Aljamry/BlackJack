@@ -39,16 +39,17 @@ console.log(getDeck())
 //         deck[location2] = tmp;
 //     }
 // }
+
 // next I need to shuffle the card deck to randomise each play
 
 
 // function shuffle()
-// {
+{
 
-//   // we will shuffle for 500 turns
-//   //we need to switch the values of two random cards
+  // we will shuffle for 500 turns
+  //we need to switch the values of two random cards
 
-// }
+}
 
 // var location = Math.floor(Math.random() * deck.length);
 
