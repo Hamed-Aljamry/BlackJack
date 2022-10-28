@@ -25,32 +25,57 @@ console.log(getDeck())
 
 
 
+
+//  - next I need to shuffle the card deck to randomise each play
+
+// 1 - Create function called "shuffle"
+
+
 // function shuffle()
 // {
-//     // for 1000 turns
-//     // switch the values of two random cards
-//     for (var i = 0; i < 1000; i++)
-//     {
-//         var location1 = Math.floor((Math.random() * deck.length));
-//         var location2 = Math.floor((Math.random() * deck.length));
-//         var tmp = deck[location1];
+  //   // 2 - I want to grab a random number for the deck
+  //   for (var z = 0; z < 1000; z += 1)
+  //   {
 
-//         deck[location1] = deck[location2];
-//         deck[location2] = tmp;
-//     }
-// }
+    //   }
 
-// next I need to shuffle the card deck to randomise each play
+    // }
 
 
-// function shuffle()
+    //3 - Take two random cards and switch their values(number)
+function testrandmoize()
 {
-
-  // we will shuffle for 500 turns
-  //we need to switch the values of two random cards
+  for (var i = 0; i < 1000; i += 1)
+  {
+    console.log(Math.floor((Math.random() * deck.length)));
+  }
 
 }
 
-// var location = Math.floor(Math.random() * deck.length);
+console.log(testrandmoize())
 
-// console.log(location)
+
+
+
+
+
+
+
+
+
+
+
+    // function shuffle()
+    // {
+    //     // for 1000 turns
+    //     // switch the values of two random cards
+    //     for (var i = 0; i < 1000; i++)
+    //     {
+    //         var location1 = Math.floor((Math.random() * deck.length));
+    //         var location2 = Math.floor((Math.random() * deck.length));
+    //         var tmp = deck[location1];
+
+    //         deck[location1] = deck[location2];
+    //         deck[location2] = tmp;
+    //     }
+    // }
