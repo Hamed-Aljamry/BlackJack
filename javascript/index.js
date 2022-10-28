@@ -50,6 +50,6 @@ console.log(getDeck())
 
 // }
 
-var location = Math.floor(Math.random() * deck.length);
+// var location = Math.floor(Math.random() * deck.length);
 
-console.log(location)
+// console.log(location)
