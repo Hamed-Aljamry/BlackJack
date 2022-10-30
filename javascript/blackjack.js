@@ -59,7 +59,16 @@ function startGame(){
     document.getElementById("dealer-cards").append(cardImg);// take the img tag we have just created and "append" to the div id chosen, basically its going to keep adding imgs/cards/values until the value is above 17
   }
   console.log(dealerSum);
-
+  // now do the same thing but without the contition, this is for the player now
+  for(let i = 0; i < 2; i += 1) {
+    let cardImg = document.createElement("img");
+    let card = deck.pop()
+    cardImg.src = "./cards/" + card + ".png";
+    yourSum += getValue(card);
+    yourAceCount += checkAce(card);
+    document.getElementById("your-cards").append(cardImg);
+  }
+  console.log(yourSum);
 }
 
 function getValue(card){
