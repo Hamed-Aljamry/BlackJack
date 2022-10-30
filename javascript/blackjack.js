@@ -21,9 +21,15 @@ function buildDeck(){
   let types = ["C", "D", "H", "S"];
   deck = [];
 
-  for (let i = 0; i < types.length; i += 1)//this will loop through each type/suit of card
-  {
-    for(let j = 0; j < values.length; j += 1)// then each suit will loop through each value as it is nested
-      deck.push(values[j] + "-" + types[i]);// this should push cards like "A-C" -> "K-C","A-D" -> "K-D" and so on....
+  for (let i = 0; i < types.length; i += 1) {
+    for(let j = 0; j < values.length; j += 1) {
+      deck.push(values[j] + "-" + types[i]);
+    }
   }
+  console.log(deck);
 }
+
+
+//this will loop through each type/suit of card
+// then each suit will loop through each value as it is nested
+// this should push cards like "A-C" -> "K-C","A-D" -> "K-D" and so on....
