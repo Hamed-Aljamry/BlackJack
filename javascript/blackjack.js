@@ -69,6 +69,21 @@ function startGame(){
     document.getElementById("your-cards").append(cardImg);
   }
   console.log(yourSum);
+
+  document.getElementById("hit").addEventListener("click", hit);
+
+}
+
+function hit(){
+  if(!canHit){
+    return;
+  }
+  let cardImg = document.createElement("img");
+  let card = deck.pop()
+  cardImg.src = "./cards/" + card + ".png";
+  yourSum += getValue(card);
+  yourAceCount += checkAce(card);
+  document.getElementById("your-cards").append(cardImg);
 }
 
 function getValue(card){
