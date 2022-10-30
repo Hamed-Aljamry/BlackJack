@@ -48,6 +48,17 @@ function startGame(){
   hidden = deck.pop();// taking the last card on the deck
   dealerSum += getValue(hidden); // get the number from the deck.pop()
   dealerAceCount += checkAce(hidden);// check if the number is Ace from deck.pop()
+  // console.log(hidden);
+  // console.log(dealerSum);
+  while(dealerSum < 17) {
+    let cardImg = document.createElement("img"); // created img tag like <img>
+    let card = deck.pop()// get card from deck
+    cardImg.src = "./cards/" + card + ".png"; // set the source for img tag like hmtl, <img src="/cards/whatever card name is.png">
+    dealerSum += getValue(card); //increment dealer sum
+    dealerAceCount += checkAce(card);
+    document.getElementById("dealer-cards").append(cardImg);// take the img tag we have just created and "append" to the div id chosen, basically its going to keep adding imgs/cards/values until the value is above 17
+  }
+  console.log(dealerSum);
 
 }
 
