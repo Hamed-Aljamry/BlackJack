@@ -1,7 +1,12 @@
+// declare card elements
 var suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
 var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+// empty array to contain cards
 var deck = new Array();
 
+
+
+// create a deck of cards
 function getDeck()
 {
   let deck = new Array()
@@ -23,12 +28,11 @@ function getDeck()
 }
 console.log(getDeck())
 
-
-
-
-//  - next I need to shuffle the card deck to randomise each play
+//  - shuffle the card deck to randomise each play
 
 // 1 - Create function called "shuffle"
+
+// shuffle the cards
 
 
 function shuffle()
@@ -36,8 +40,9 @@ function shuffle()
     // 2 - I want to grab a random number for the deck
     // 3 - Take two random cards and switch their values(number)
     // 4- Shuffle 500 times
-    let deck = new Array
-    for (var z = 0; z < 500; z += 1)
+
+    // let deck = new Array
+    for (var z = 0; z < 100; z += 1)
     {
       var card1 = Math.floor((Math.random() * deck.length));
       var card2 = Math.floor((Math.random() * deck.length));
@@ -50,15 +55,3 @@ function shuffle()
       }
       return deck;
     }
-    console.log(shuffle());
-
-// function testrandmoize()
-// {
-//   for (var i = 0; i < 1000; i += 1)
-//   {
-//     Math.floor((Math.random() * deck.length));
-//   }
-
-// }
-
-// console.log(testrandmoize())
