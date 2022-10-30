@@ -46,7 +46,9 @@ function shuffleDeck(){
 
 function startGame(){
   hidden = deck.pop();// taking the last card on the deck
-  dealerSum += getValue(hidden)
+  dealerSum += getValue(hidden); // get the number from the deck.pop()
+  dealerAceCount += checkAce(hidden);// check if the number is Ace from deck.pop()
+
 }
 
 function getValue(card){
@@ -60,4 +62,12 @@ function getValue(card){
     return 10;// if its anything other than A which in this case is J,Q,K then we return 10
   }
   return parseInt(value); //otherwise we just return whatever number the value is, we use parseInt to change from string to integer
+}
+
+
+function checkAce(card) {
+  if(card[0] == "A") {
+    return 1;
+  }
+  return 0;
 }
