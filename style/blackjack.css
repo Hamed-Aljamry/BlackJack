@@ -1,24 +1,33 @@
 html {
   background-color: darkgreen;
 }
-.game-body {
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-.game {
-color: gold;
-text-align: center;
-}
-.game-options {
-  color: green;
+
+#dealer-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
 }
 
-.btn {
-  color: black;
-  padding: 1%;
-  background-color: bisque;
-
+#your-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
 }
-.deck {
-  margin-top: 5%;
+
+#hit {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#stay {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
 }

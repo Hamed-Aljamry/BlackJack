@@ -10,17 +10,20 @@
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
   <title>Black Jack</title>
-  <link rel="stylesheet" href="style/blackjack.css">
+  <link rel="stylesheet" href="./style/blackjack.css">
 </head>
 <body>
   <h2>Dealer: <span id="dealer-sum"></span></h2>
-  <div id="dealer-cards"></div>
-    <img src="./cards/BACK.png">
-    <img src="./cards/10-C.png"
+  <div id="dealer-cards">
+    <img id="hidden" src="./cards/BACK.png">
+  </div>
 
 
 <h2>You: <span id="your-sum"></span></h2>
-<div id="your-cards"></div>
+<div id="your-cards">
+
+
+</div>
 
 <br>
 <button id="hit">Hit</button>
