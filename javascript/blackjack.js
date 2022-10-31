@@ -17,7 +17,7 @@ window.onload = function(){
   startGame();
 }
 
-
+//
 function buildDeck(){
   let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
   let types = ["C", "D", "H", "S"];
@@ -43,6 +43,7 @@ function shuffleDeck(){
   }
   console.log(deck);
 }
+
 
 function startGame(){
   hidden = deck.pop();// taking the last card on the deck
@@ -71,6 +72,7 @@ function startGame(){
   console.log(yourSum);
 
   document.getElementById("hit").addEventListener("click", hit);
+  document.getElementById("stay").addEventListener("click", stay);
 
 }
 
@@ -84,6 +86,23 @@ function hit(){
   yourSum += getValue(card);
   yourAceCount += checkAce(card);
   document.getElementById("your-cards").append(cardImg);
+
+  if (reduceAce(yourSum, yourAceCount) > 21){ // so if i have: A, J, 8 -> 11 + 10 + 8, I want the player to have 1 instead of 11 for the Ace value
+    canHit = false;
+  }
+}
+// once the player stays, this needs to total up the number of cards to get the value
+// reduce ace needs to be called to take inrto consideration as it could be 11 or 1
+function stay(){
+  dealerSum = reduceAce(dealerSum, dealerAceCount);
+  yourSum = reduceAce(yourSum, yourAceCount);
+
+  canHit = false;
+  document.getElementById("hidden").src = "./cards/" + hidden + ".png";
+
+  let message = "";
+
+
 }
 
 function getValue(card){
@@ -105,4 +124,13 @@ function checkAce(card) {
     return 1;
   }
   return 0;
+}
+
+// reduce the total sum if player has any aces so its going to change the 11 into a 1 as many times as possible until player hits 21 or until run out of aces
+function reduceAce(playerSum, playerAceCount) {
+  while (playerSum > 21 && playerAceCount > 0){
+    playerSum -= 10;
+    playerAceCount -= 1;
+  }
+  return playerSum;
 }
