@@ -101,8 +101,25 @@ function stay(){
   document.getElementById("hidden").src = "./cards/" + hidden + ".png";
 
   let message = "";
-
-
+  if (yourSum > 21){
+    message = "You lose! HAHA"
+  }
+  else if (dealerSum > 21) {
+    message = "YOU WIN!!!";
+  }
+  // both player and the dealer have the sum oo <= 21
+  else if (yourSum == dealerSum){
+    message = "Tie!";
+  }
+  else if (yourSum > dealerSum){
+    message = "YOU WIN!!!";
+  }
+  else if (yourSum < dealerSum){
+    message = "You LOSE! HAHA"
+  }
+  document.getElementById("dealer-sum").innerText = dealerSum
+  document.getElementById("your-sum").innerText = yourSum
+  document.getElementById("results").innerText = message;
 }
 
 function getValue(card){
