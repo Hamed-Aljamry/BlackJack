@@ -4,6 +4,7 @@ var yourSum = 0;
 var dealerAceCount = 0;
 var yourAceCount = 0;
 
+var playerTotal = 100 // player money
 
 var hidden; // flipped card for dealer
 var deck;
@@ -11,11 +12,15 @@ var deck;
 var canHit = true; // allows me to draw cards while yourSum <= 21
 
 
+
+
 window.onload = function(){
   buildDeck();
   shuffleDeck();
   startGame();
 }
+
+
 
 //
 function buildDeck(){
@@ -117,8 +122,8 @@ function stay(){
   else if (yourSum < dealerSum){
     message = "You LOSE! HAHA"
   }
-  document.getElementById("dealer-sum").innerText = dealerSum
-  document.getElementById("your-sum").innerText = yourSum
+  document.getElementById("dealer-sum").innerText = dealerSum;
+  document.getElementById("your-sum").innerText = yourSum;
   document.getElementById("results").innerText = message;
 }
 
