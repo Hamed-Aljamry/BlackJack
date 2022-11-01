@@ -5,7 +5,7 @@ var dealerAceCount = 0;
 var yourAceCount = 0;
 
 
-var hidden;
+var hidden; // flipped card for dealer
 var deck;
 
 var canHit = true; // allows me to draw cards while yourSum <= 21
@@ -61,7 +61,7 @@ function startGame(){
   }
   console.log(dealerSum);
   // now do the same thing but without the contition, this is for the player now
-  for(let i = 0; i < 2; i += 1) {
+  for(let i = 0; i < 2; i += 1) {  // I put < 2 because the player starts with two cards
     let cardImg = document.createElement("img");
     let card = deck.pop()
     cardImg.src = "./cards/" + card + ".png";
@@ -124,7 +124,7 @@ function stay(){
 
 function getValue(card){
   let data = card.split("-"); // example, random card: "4-C" should be like -> ["4", "C"]
-  let value = data[0]; //getting the number now, since the letter has been split in teh array.
+  let value = data[0]; //getting the number now, since the letter has been split in the array.
 
   if (isNaN(value)) { // if its not a number value then..
     if (value == "A") { //if its A we return 11
