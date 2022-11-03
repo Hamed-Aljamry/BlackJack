@@ -106,6 +106,7 @@ function stay(){
   document.getElementById("hidden").src = "./cards/" + hidden + ".png";
 
   let message = "";
+  let loserlink = "/cards/10-C.png"
   if (yourSum > 21){
     message = "You lose! HAHA"
   }
